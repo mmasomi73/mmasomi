@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import ReactPlayer from 'react-player'
 import '../../assets/css/PlayerControls.css'
 import Duration from "./Duration";
-import Axios from "axios";
-import urls from "../../hoc/URLHandler/URLHandler";
 
 class PlayerControls extends Component {
     constructor(props) {

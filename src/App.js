@@ -12,6 +12,7 @@ import Posts from "./components/Posts/Posts";
 import {BrowserRouter, Route} from 'react-router-dom'
 import NewPost from "./components/Posts/NewPost";
 import Player from "./components/Player/Player";
+import CurriculumVitae from "./components/CV/CurriculumVitae";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/" exact component={Posts}/>
                 <Route path="/put-message" exact component={NewPost}/>
                 <Route path="/player" exact component={Player}/>
+                <Route path="/cv" exact component={CurriculumVitae}/>
                 <Footer/>
             </BrowserRouter>
         </div>

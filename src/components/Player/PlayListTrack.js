@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
 
 class PlayList extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         let classes = 'row ltr music-list';

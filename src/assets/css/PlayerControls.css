@@ -234,6 +234,7 @@
     border-left: 1px solid #0000001a;
     border-top: 1px solid #0000001a;
     border-radius: 3px 0 0 0;
+    padding-right: 10px;
 }
 .play-list-box .card-body{
     padding: 8px 8px !important;

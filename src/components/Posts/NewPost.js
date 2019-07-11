@@ -7,6 +7,7 @@ class NewPost extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            key: '',
             title: '',
             post: '',
             backPost: '',
@@ -24,6 +25,7 @@ class NewPost extends Component {
         this.setState({sending: true});
         if (this.state.title.length > 0 && (this.state.post.length > 0 || this.state.backPost.length > 0)) {
             Axios.post(urls.newPost, {
+                key: this.state.key,
                 title: this.state.title,
                 post: this.state.post,
                 backPost: this.state.backPost,
@@ -33,6 +35,9 @@ class NewPost extends Component {
                 this.setState({sending: false, error: true});
             });
         }
+    };
+    changeKey = (event) => {
+        this.setState({key: event.target.key});
     };
     changeTitle = (event) => {
         this.setState({title: event.target.value});
@@ -69,6 +74,18 @@ class NewPost extends Component {
                     <div className="card-body">
                         <h5 className="card-title isf">یک پیام بگذارید</h5>
 
+                        {/*--------------= Key =--------------*/}
+                        <div className="row modern">
+                            <div className="col-lg-3 text-left">
+                                <label htmlFor="key" className="control-label d-inline modern">
+                                    >&#160;&#160;&#160;&#160;&#160;&#160;&#160;کلید: </label>
+                            </div>
+                            <div className="col-lg-9">
+                                <input onChange={this.changeKey} type="password" name="key" id="key"
+                                       className="form-control modern-inp"/>
+                            </div>
+
+                        </div>
                         {/*--------------= Title =--------------*/}
                         <div className="row modern">
                             <div className="col-lg-3 text-left">
